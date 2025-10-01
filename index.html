@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Aula 10</title>
 
     <style>
@@ -13,11 +14,26 @@
         @import 'tailwindcss/utilities';
 
         .dropdown-menu {
+            position: absolute;
             transform: translateY(-10px);
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease-in-out;
             pointer-events: none;
+            gap: 8px;
+            white-space: nowrap;
+            border-radius: 5px;
+            box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
+                0px 5px 4px rgba(3, 7, 18, 0.03),
+                0px 12px 9px rgba(3, 7, 18, 0.05),
+                0px 20px 15px rgba(3, 7, 18, 0.06),
+                0px 32px 24px rgba(3, 7, 18, 0.08);
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+            color: rgb(0, 0, 0);
+            display: block;
         }
 
         .dropdown:hover .dropdown-menu {
@@ -47,24 +63,39 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <h1
-                        class="text-2xl font-bold bg-gradient-to-r from-red-600 to to-blue-600 bg-clip-text text-transparent
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-red-600 to to-blue-600 bg-clip-text text-transparent
                         
                         hover:from-blue-600 hover:to-red-600
                         transition-all duration-300 cursor-pointer">
+                        <i class="ph ph-code"></i>
                         Dev College
                     </h1>
                 </div>
                 <nav class="flex space-x-8">
-                    <a href="#" class="menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors duration-200">
+                    <a href="#"
+                        class="menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors duration-200">
                         Home
                     </a>
 
-                    <div class="dropdown relative">
-                        <button class="menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors duration-200">
-
+                    <div class="dropdown">
+                        <button
+                            class="menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors duration-200">
+                            <i class="ph ph-caret-down arrow"></i>
                             Serviços
-                            
+                        </button>
+
+                        <ul class="dropdown-menu bg-white text-gray-700 hover:text-blue-600 px-2 py-2 text-sm rounded-md hover:bg-blue-50 transition-colors duration-200">
+                            <li class="px-2"><a href="#">Web Design</a></li>
+                            <li class="px-2"><a href="#">SEO</a></li>
+                            <li class="px-2"><a href="#">SAAS</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="dropdown relative">
+                        <button
+                            class="menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors duration-200">
+                            Contato
                         </button>
                     </div>
                 </nav>
