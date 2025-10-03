@@ -14,6 +14,7 @@
         @import 'tailwindcss/utilities';
 
         .dropdown-menu {
+            background-color: hsl(221, 83%, 53%, 0.2);
             position: absolute;
             transform: translateY(-10px);
             opacity: 0;
@@ -30,7 +31,7 @@
                 0px 32px 24px rgba(3, 7, 18, 0.08);
         }
 
-        .dropdown-menu li {
+        .dropdown-menu ul li {
             width: 100%;
             color: rgb(0, 0, 0);
             display: block;
@@ -84,10 +85,11 @@
                             Serviços
                         </button>
 
-                        <ul class="dropdown-menu bg-white text-gray-700 hover:text-blue-600 px-2 py-2 text-sm rounded-md hover:bg-blue-50 transition-colors duration-200">
+                        <ul class="dropdown-menu">
                             <li class="px-2"><a href="#">Web Design</a></li>
                             <li class="px-2"><a href="#">SEO</a></li>
                             <li class="px-2"><a href="#">SAAS</a></li>
+                            <li class="px-2"><a href="#">Mobile</a></li>
                         </ul>
 
                     </div>
