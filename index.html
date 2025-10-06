@@ -14,7 +14,8 @@
         @import 'tailwindcss/utilities';
 
         .dropdown-menu {
-            background-color: hsl(221, 83%, 53%, 0.2);
+            background-color: hsla(221, 81%, 39%, 0.87);
+            color: white;
             position: absolute;
             transform: translateY(-10px);
             opacity: 0;
@@ -48,12 +49,13 @@
             transition: all 0.3s ease;
         }
 
-        .dropdown:hover .arrow {
-            transform: rotate(180deg);
-        }
-
         .arrow {
             transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+            
         }
     </style>
 </head>
@@ -86,10 +88,10 @@
                         </button>
 
                         <ul class="dropdown-menu">
-                            <li class="px-2"><a href="#">Web Design</a></li>
-                            <li class="px-2"><a href="#">SEO</a></li>
-                            <li class="px-2"><a href="#">SAAS</a></li>
-                            <li class="px-2"><a href="#">Mobile</a></li>
+                            <li class="p-2 hover:-translate-y-1 transition delay-100"><a href="#">Web Design</a></li>
+                            <li class="p-2 hover:-translate-y-1 transition delay-100"><a href="#">SEO</a></li>
+                            <li class="p-2 hover:-translate-y-1 transition delay-100"><a href="#">SAAS</a></li>
+                            <li class="p-2 hover:-translate-y-1 transition delay-100"><a href="#">Mobile</a></li>
                         </ul>
 
                     </div>
